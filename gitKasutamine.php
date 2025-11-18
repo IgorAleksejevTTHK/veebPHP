@@ -30,3 +30,20 @@ git config --global --list
 </li>
 <?php
 echo "<li>GITHUB projektiga sidumine";
+echo "<pre>";
+echo"git remote add origin git@github.com:IgorAleksejevTTHK/veebPHP.git
+
+git branch -M main
+
+C:\Users\opilane\Desktop\php1tund>git push -u origin main";
+echo "</pre>";
+echo "</li>";
+
+echo "<li>Projektikloonime desktopi. <br>
+* Kontrolli, et id_rsa võti on olemas .ssh kaustas <br>
+*GIT CMD on lahti ja <br>";
+echo "<pre>";
+echo "git clone git@github.com:IgorAleksejevTTHK/veebPHP.git";
+echo "</pre>";
+echo "</li>";
+echo "</ol>";
