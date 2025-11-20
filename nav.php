@@ -9,6 +9,13 @@
                 </a>
             </strong>
         </li>
+        <li>
+            <strong>
+                <a href="?link=tekstifunktsioonid.php">
+                    Tekstifunktsioonid
+                </a>
+            </strong>
+        </li>
 
         <li><strong>
                 <a href="https://igoraleksejev24.thkit.ee/" target="_blank">
