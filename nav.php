@@ -11,7 +11,14 @@
         </li>
         <li>
             <strong>
-                <a href="?link=tekstifunktsioonid.php">
+                <a href="?link=ajafunktsioonid.php">
+                    Ajafunktsioonid
+                </a>
+            </strong>
+        </li>
+        <li>
+            <strong>
+                <a href="?link=tekstfunktsioonid.php">
                     Tekstifunktsioonid
                 </a>
             </strong>

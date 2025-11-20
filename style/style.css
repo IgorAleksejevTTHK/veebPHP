@@ -13,6 +13,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 30px;
 
 }
 
@@ -60,4 +61,26 @@ img{
     div.flex-container {
         flex-direction: column;
     }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* перенос колонок */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.block {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /* ширина каждого div */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.block h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
 }
