@@ -78,16 +78,16 @@ echo "<h2>Tekst funktsioonid</h2>";
         <?php
         $linn = "Parnu";
 
-        if (isset($_POST["linn"]) && $_POST["linn"] !== "") {
-            $linn = $_POST["linn"];
+        if (isset($_REQUEST["linn"]) && $_REQUEST["linn"] !== "") {
+            $linn = $_REQUEST["linn"];
         }
 
         echo "<ol>";
-        echo "<li>Esimene täht: ".$linn[0]."</li>";
-        echo "<li>Kokku ".strlen($linn)." tähte</li>";
-        echo "<li>Teine täht: ".$linn[1]."</li>";
-        echo "<li>Viimased 2 tähte: ".substr($linn, -2)."</li>";
-        echo "<li>Muudetud nimi: ".substr_replace(" on suvi pealinn","Tartu",0,0)."</li>";
+        echo "<li>Esimene täht: " . $linn[0] . "</li>";
+        echo "<li>Kokku " . strlen($linn) . " tähte</li>";
+        echo "<li>Teine täht: " . $linn[1] . "</li>";
+        echo "<li>Viimased 2 tähte: " . substr($linn, -2) . "</li>";
+        echo "<li>Muudetud nimi: " . substr_replace(" on suvi pealinn", "Tartu", 0, 0) . "</li>";
         echo "</ol>";
         ?>
 
@@ -98,18 +98,18 @@ echo "<h2>Tekst funktsioonid</h2>";
         </form>
 
         <?php
-        if (isset($_POST["linn"])) {
-            if (strcasecmp($_POST["linn"], "Parnu") === 0) {
-                echo "<p class='success'>{$_POST['linn']} on õige</p>";
+        if (isset($_REQUEST["linn"])) {
+            if (strcasecmp($_REQUEST["linn"], "Parnu") === 0) {
+                echo "<p class='success'>{$_REQUEST['linn']} on õige</p>";
             } else {
-                echo "<p class='error'>{$_POST['linn']} ei ole õige</p>";
+                echo "<p class='error'>{$_REQUEST['linn']} ei ole õige</p>";
             }
         }
         ?>
-    </div>
+
 
 </div>
 
-</body>
+</div>
 </html>
 
