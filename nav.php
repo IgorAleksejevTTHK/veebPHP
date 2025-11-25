@@ -31,6 +31,14 @@
             </strong>
         </li>
 
+        <li>
+            <strong>
+            <a href="?link=tekstifailid.php">
+                Tekstifailid
+            </a>
+        </strong>
+        </li>
+
         <li><strong>
                 <a href="https://igoraleksejev24.thkit.ee/" target="_blank">
                     Vana index
