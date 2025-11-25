@@ -1,4 +1,12 @@
 <?php
+function clearVarsExcept($url, $varname)
+{
+    $url = basename($url);
+    if (str_starts_with($url, "?")) {
+        return "?$varname=$_REQUEST[$varname]";
+    }
+    return strtok($url, "?")."?$varname=".$_REQUEST[$varname];
+}
 echo "<h2>Matemaatilised tehted</h2>";
 $arv1= 1.21;
 $arv2= 2.54;
@@ -74,3 +82,44 @@ $format = 'Tere, %s %s, arv x: %d';
 printf($format, $perenimi, $nimi,$x);
 
 echo "<br>";
+echo "<h2>Arv mõistatus, arva ära 2 arvu (10-30)</h2>";
+$secretarv1=22;
+$secretarv2=11;
+echo "Esimene Arv ruutjuuris = ";
+echo sqrt($secretarv1);
+echo "<br>";
+echo "Teine arv astendamises(2) = ";
+echo pow($secretarv1, 2);
+echo "<br>";
+echo "Esimene arv - Teine arv = ".($secretarv1-$secretarv2);
+echo "<br>";
+echo "Esimene arv + Teine arv = ".($secretarv1+$secretarv2);
+echo "<br>";
+echo "Esimene arv - $secretarv2 = Teine arv";
+echo "<br>";
+?>
+<br>
+<form method="post">
+    <label>Esimene arv:</label>
+    <input type="number" name="arv1" required><br><br>
+
+    <label>Teine arv:</label>
+    <input type="number" name="arv2" required><br><br>
+
+    <input type="submit" value="Kontrolli">
+</form>
+
+<?php
+if (isset($_POST['arv1']) && isset($_POST['arv2'])) {
+
+    $arv1 = $_POST['arv1'];
+    $arv2 = $_POST['arv2'];
+
+    if ($arv1 == $secretarv1 && $arv2 == $secretarv2) {
+        echo "Õige! Sa arvasid mõlemad arvud ära";
+    } else {
+        echo "Vale! Proovi uuesti.";
+    }
+}
+?>
+
