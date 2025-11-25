@@ -1,5 +1,5 @@
 <?php
-echo"<h2>GIT käsud";
+echo"<h2>GIT käsud</h2>";
 echo "<ol>";
 echo "<li>Repo loomine";
 echo "<pre>git init</pre>";
