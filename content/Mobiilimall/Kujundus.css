@@ -1,0 +1,58 @@
+/* Сброс отступов и базовый стиль */
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 0;
+    background: #fafafa;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Меню */
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#menu ul li {
+    display: block; /* вертикальный список для мобильного */
+    margin: 8px 0;
+}
+
+#menu ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 12px;
+    background: #333;
+    color: white;
+    border-radius: 6px;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+#menu ul li a:hover {
+    background: #555;
+}
+
+/* Футер */
+#footer {
+    text-align: center;
+    color: #888;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+/* Адаптивность через медиазапросы */
+@media (min-width: 480px) {
+    #menu ul li {
+        display: inline-block; /* горизонтальное меню для планшетов и выше */
+        margin: 0 8px;
+    }
+
+    #menu ul li a {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}

@@ -1,0 +1,13 @@
+<?php require("paisNadal.php"); ?>
+
+<h2>Esmaspäev</h2>
+<p>
+<ol>
+    <li>Matemaatika</li>
+    <li>Ajalugu</li>
+    <li>Laulmine</li>
+</ol>
+</p>
+
+<?php require("teade.txt"); ?>
+<?php require("jalus.php"); ?>

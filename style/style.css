@@ -1,9 +1,13 @@
+/* ===== Header ===== */
 header {
     background-color: #BEFFC9FF;
     text-align: center;
     padding: 10px;
+    position: relative; /* чтобы dropdown мог позиционироваться правильно */
+    z-index: 1000;
 }
 
+/* ===== Footer ===== */
 footer {
     background-color: #beffc9;
     text-align: center;
@@ -13,51 +17,101 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-
 }
 
+/* ===== Top horizontal navbar ===== */
 ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
-    width: 130px;
     background-color: #BEFFC9FF;
-    height: 100%; /* Full height */
-    position: fixed; /* Make it stick, even on scroll */
-    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+    display: flex;
+    flex-wrap: wrap; /* для адаптивности */
+    overflow: visible; /* важно для dropdown */
 }
+
+li {
+    position: relative; /* для dropdown */
+}
+
 li a {
     display: block;
     color: black;
-    padding: 8px 16px;
+    text-align: center;
+    padding: 12px 16px;
     text-decoration: none;
 }
 
-/* Change the link and background color on hover */
+/* Hover effect */
 li a:hover {
     background-color: #555555;
     color: white;
 }
+
+/* ===== RIP-dropdown ===== */
+li.dropdown .dropdown-content {
+    display: none;
+    position: absolute; /* абсолютное позиционирование под li */
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 2000;
+    flex-direction: column;
+}
+
+li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li a {
+    color: black;
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown-content li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* ===== Flex-контейнер ===== */
 div.flex-container {
     display: flex;
     flex-direction: row;
-    margin-left:10%;
-
+    margin-top: 20px; /* оставляем место под верхнее меню */
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 div.flex-container > div {
     margin: 10px;
-    flex: 1; /*veergu laius*/
+    flex: 1;
     border: solid 2pt lightgreen;
     border-radius: 10px;
     padding: 10px;
 }
-img{
-    width:300px;
 
+/* ===== Изображения ===== */
+img {
+    width: 300px;
 }
+
+/* ===== Адаптив ===== */
 @media screen and (max-width: 600px) {
+    ul {
+        flex-direction: column;
+    }
     div.flex-container {
         flex-direction: column;
+        margin-top: 0;
+    }
+    li.dropdown .dropdown-content {
+        position: relative; /* подменю внутри потока */
+        top: 0;
+        left: 0;
     }
 }

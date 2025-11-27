@@ -1,0 +1,61 @@
+/* Üldine konteiner */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #fdfdfd;
+}
+
+/* Sektsioonid */
+.section {
+    margin-bottom: 30px;
+    padding: 15px;
+    border-left: 4px solid #4a90e2;
+    background: #fafafa;
+    border-radius: 6px;
+}
+
+/* Sisukastid */
+.content-box {
+    background: white;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Pealkirjad */
+h1, h2, h3, h4 {
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+}
+
+h1 { color: #222; }
+h2 { color: #333; }
+h3 { color: #444; }
+h4 { color: #555; }
+
+/* Koodikastid */
+pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 14px;
+}
+
+/* Responsiivsus */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    .content-box {
+        padding: 12px;
+    }
+    pre {
+        font-size: 13px;
+    }
+}

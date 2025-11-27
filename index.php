@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/muusikaStyle.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
+    <link rel="stylesheet" href="style/konspekt.css">
 
 </head>
 <body>
 <?php
 //päis
-    include("header.php");
+include("header.php");
 ?>
 
 <?php
